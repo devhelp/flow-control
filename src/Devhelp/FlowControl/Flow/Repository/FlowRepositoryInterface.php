@@ -1,9 +1,9 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Flow\Repository;
+namespace Devhelp\FlowControl\Flow\Repository;
 
 
-use Devhelp\Component\FlowControl\Flow\Flow;
+use Devhelp\FlowControl\Flow\Flow;
 
 interface FlowRepositoryInterface
 {

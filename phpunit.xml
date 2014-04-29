@@ -14,8 +14,8 @@
     bootstrap                   = "vendor/autoload.php" >
 
     <testsuites>
-        <testsuite name="Test Suite">
-            <directory>Tests</directory>
+        <testsuite name="Devhelp Flow Control Test Suite">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 
@@ -23,9 +23,10 @@
         <whitelist>
             <directory>.</directory>
             <exclude>
-                <directory>Tests</directory>
-                <directory>vendor</directory>
                 <directory>bin</directory>
+                <directory>docs</directory>
+                <directory>tests</directory>
+                <directory>vendor</directory>
             </exclude>
         </whitelist>
     </filter>

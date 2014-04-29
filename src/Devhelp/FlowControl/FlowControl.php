@@ -1,9 +1,9 @@
 <?php
 
-namespace Devhelp\Component\FlowControl;
+namespace Devhelp\FlowControl;
 
-use Devhelp\Component\FlowControl\Exception\FlowDoesNotExistException;
-use Devhelp\Component\FlowControl\Flow\Repository\FlowRepositoryInterface;
+use Devhelp\FlowControl\Exception\FlowDoesNotExistException;
+use Devhelp\FlowControl\Flow\Repository\FlowRepositoryInterface;
 
 class FlowControl implements FlowControlInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Flow\Repository;
+namespace Devhelp\FlowControl\Flow\Repository;
 
 
-use Devhelp\Component\FlowControl\Flow\Builder\FlowBuilder;
+use Devhelp\FlowControl\Flow\Builder\FlowBuilder;
 
 class LazyFlowRepository implements FlowRepositoryInterface
 {

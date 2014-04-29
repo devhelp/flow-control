@@ -1,9 +1,9 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Flow\Builder;
+namespace Devhelp\FlowControl\Flow\Builder;
 
 
-use Devhelp\Component\FlowControl\Flow\Flow;
+use Devhelp\FlowControl\Flow\Flow;
 
 class FlowBuilder
 {

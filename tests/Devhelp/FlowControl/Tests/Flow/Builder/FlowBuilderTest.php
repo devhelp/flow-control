@@ -1,11 +1,11 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Tests\Builder;
+namespace Devhelp\FlowControl\Tests\Builder;
 
 
-use Devhelp\Component\FlowControl\Flow\Builder\FlowBuilder;
-use Devhelp\Component\FlowControl\Flow\Flow;
-use Devhelp\Component\FlowControl\Tests\BaseFlowControlTestCase;
+use Devhelp\FlowControl\Flow\Builder\FlowBuilder;
+use Devhelp\FlowControl\Flow\Flow;
+use Devhelp\FlowControl\Tests\BaseFlowControlTestCase;
 
 class FlowBuilderTest extends BaseFlowControlTestCase
 {

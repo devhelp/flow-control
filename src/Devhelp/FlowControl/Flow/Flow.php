@@ -1,8 +1,8 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Flow;
+namespace Devhelp\FlowControl\Flow;
 
-use Devhelp\Component\FlowControl\Exception\StepDoesNotExistException;
+use Devhelp\FlowControl\Exception\StepDoesNotExistException;
 
 class Flow
 {

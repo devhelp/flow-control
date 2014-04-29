@@ -26,7 +26,6 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "Devhelp\\Component\\FlowControl": "" }
-    },
-    "target-dir": "Devhelp/Component/FlowControl"
+        "psr-0": { "Devhelp\\FlowControl": "src/" }
+    }
 }

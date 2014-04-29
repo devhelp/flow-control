@@ -1,15 +1,15 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Tests;
+namespace Devhelp\FlowControl\Tests;
 
-use Devhelp\Component\FlowControl\FlowControl;
+use Devhelp\FlowControl\FlowControl;
 
 class FlowControlTest extends BaseFlowControlTestCase
 {
 
     /**
      * @test
-     * @expectedException Devhelp\Component\FlowControl\Exception\FlowDoesNotExistException
+     * @expectedException Devhelp\FlowControl\Exception\FlowDoesNotExistException
      */
     public function canAccessThrowsExceptionIfFlowDoesNotExists()
     {

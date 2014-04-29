@@ -1,16 +1,4 @@
-/web/bundles/
-/app/bootstrap.php.cache
-/app/cache/*
-/app/config/parameters.yml
-/app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
-/build/
 /vendor/
 /bin/
-/composer.phar
 .idea
-/src/Devhelp/Component/FlowControl/vendor/
-/src/Devhelp/Component/FlowControl/code-coverage/
-/src/Devhelp/Bundle/FlowControlBundle/vendor/
-/src/Devhelp/Bundle/FlowControlBundle/vendor/
+*~

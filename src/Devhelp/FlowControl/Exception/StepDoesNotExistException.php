@@ -1,6 +1,6 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Exception;
+namespace Devhelp\FlowControl\Exception;
 
 
 class StepDoesNotExistException extends \Exception

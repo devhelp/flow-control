@@ -1,6 +1,6 @@
 <?php
 
-namespace Devhelp\Component\FlowControl;
+namespace Devhelp\FlowControl;
 
 interface FlowControlInterface
 {

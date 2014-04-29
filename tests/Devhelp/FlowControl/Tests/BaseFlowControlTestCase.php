@@ -1,6 +1,6 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Tests;
+namespace Devhelp\FlowControl\Tests;
 
 
 abstract class BaseFlowControlTestCase extends \PHPUnit_Framework_TestCase
@@ -14,7 +14,7 @@ abstract class BaseFlowControlTestCase extends \PHPUnit_Framework_TestCase
     protected function getFlowMock()
     {
         $mock = $this
-            ->getMockBuilder('Devhelp\Component\FlowControl\Flow\Flow')
+            ->getMockBuilder('Devhelp\FlowControl\Flow\Flow')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -24,7 +24,7 @@ abstract class BaseFlowControlTestCase extends \PHPUnit_Framework_TestCase
     protected function getFlowRepositoryMock($flows = array())
     {
         $mock = $this
-            ->getMockBuilder('Devhelp\Component\FlowControl\Flow\Repository\FlowRepositoryInterface')
+            ->getMockBuilder('Devhelp\FlowControl\Flow\Repository\FlowRepositoryInterface')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -45,7 +45,7 @@ abstract class BaseFlowControlTestCase extends \PHPUnit_Framework_TestCase
     protected function getFlowBuilderMock($flows)
     {
         $mock = $this
-            ->getMockBuilder('Devhelp\Component\FlowControl\Flow\Builder\FlowBuilder')
+            ->getMockBuilder('Devhelp\FlowControl\Flow\Builder\FlowBuilder')
             ->disableOriginalConstructor()
             ->getMock();
 

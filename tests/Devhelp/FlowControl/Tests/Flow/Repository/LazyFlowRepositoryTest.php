@@ -1,9 +1,9 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Tests\Repository;
+namespace Devhelp\FlowControl\Tests\Repository;
 
-use Devhelp\Component\FlowControl\Flow\Repository\LazyFlowRepository;
-use Devhelp\Component\FlowControl\Tests\BaseFlowControlTestCase;
+use Devhelp\FlowControl\Flow\Repository\LazyFlowRepository;
+use Devhelp\FlowControl\Tests\BaseFlowControlTestCase;
 
 class LazyFlowRepositoryTest extends BaseFlowControlTestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Devhelp\Component\FlowControl\Tests\Flow;
+namespace Devhelp\FlowControl\Tests\Flow;
 
 
-use Devhelp\Component\FlowControl\Flow\Flow;
-use Devhelp\Component\FlowControl\Tests\BaseFlowControlTestCase;
+use Devhelp\FlowControl\Flow\Flow;
+use Devhelp\FlowControl\Tests\BaseFlowControlTestCase;
 
 class FlowTest extends BaseFlowControlTestCase
 {
@@ -23,7 +23,7 @@ class FlowTest extends BaseFlowControlTestCase
 
     /**
      * @test
-     * @expectedException Devhelp\Component\FlowControl\Exception\StepDoesNotExistException
+     * @expectedException Devhelp\FlowControl\Exception\StepDoesNotExistException
      * @expectedExceptionMessage step [step_X, step_Y] does not exist in flow [test-flow]
      */
     public function setEntryPointsThrowsExceptionIfStepsDoNotExist()
