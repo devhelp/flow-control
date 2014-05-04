@@ -1,6 +1,6 @@
 {
     "name": "devhelp/flow-control",
-    "description": "",
+    "description": "component that allows to control state changes in the flow.",
     "keywords": ["flow"],
     "homepage": "http://devhelp.pl",
     "license": "MIT",
