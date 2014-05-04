@@ -5,6 +5,9 @@ namespace Devhelp\FlowControl\Flow\Builder;
 
 use Devhelp\FlowControl\Flow\Flow;
 
+/**
+ * Build flows from flow definition
+ */
 class FlowBuilder
 {
     protected $definitions;
@@ -16,6 +19,12 @@ class FlowBuilder
         return $this;
     }
 
+    /**
+     * Builds and returns flow of given $flowId
+     *
+     * @param $flowId
+     * @return Flow|null
+     */
     public function build($flowId)
     {
         if (!isset($this->definitions[$flowId])) {

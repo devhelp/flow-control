@@ -5,7 +5,7 @@ namespace Devhelp\FlowControl;
 use Devhelp\FlowControl\Exception\FlowDoesNotExistException;
 use Devhelp\FlowControl\Flow\Repository\FlowRepositoryInterface;
 
-class FlowControl implements FlowControlInterface
+class FlowControl
 {
 
     /**
@@ -35,7 +35,13 @@ class FlowControl implements FlowControlInterface
     }
 
     /**
-     * {@inheritdoc}
+     * checks if it is possible to move to step $step in the flow
+     * of given $flowId
+     *
+     * @param $step
+     * @param $flowId
+     * @return bool
+     * @throws Exception\FlowDoesNotExistException
      */
     public function canAccess($step, $flowId)
     {
@@ -61,23 +67,26 @@ class FlowControl implements FlowControlInterface
     }
 
     /**
-     * {@inheritdoc}
+     * returns array with all valid moves from the $moves array
+     *
+     * @param array $moves
+     * @return array
      */
-    public function resolveValid(array $nextSteps)
+    public function resolveValid(array $moves)
     {
-        $validSteps = array();
+        $validMoves = array();
 
-        foreach ($nextSteps as $flowId => $nextStep) {
-            if ($this->canAccess($nextStep, $flowId)) {
+        foreach ($moves as $flowId => $step) {
+            if ($this->canAccess($step, $flowId)) {
 
                 /*
                  * only one valid step per flow - otherwise it we may have conflict because
                  * if we have many valid steps then to which one should we go next ?
                  */
-                $validSteps[$flowId] =  $nextStep;
+                $validMoves[$flowId] =  $step;
             }
         }
 
-        return $validSteps;
+        return $validMoves;
     }
 }

@@ -19,6 +19,9 @@ class Flow
     }
 
     /**
+     * sets steps that are entry points in the flow. Entry points must be existing
+     * steps so moves must be set first
+     *
      * @param array $entryPoints
      * @return Flow
      * @throws StepDoesNotExistException
@@ -45,6 +48,12 @@ class Flow
         return $this->entryPoints;
     }
 
+    /**
+     * sets flow moves. Steps from the array will be treated as flow steps.
+     *
+     * @param array $moves
+     * @return $this
+     */
     public function setMoves(array $moves = array())
     {
         $this->moves = $moves;
@@ -56,9 +65,13 @@ class Flow
         }
 
         $this->steps = array_unique($steps);
+
+        return $this;
     }
 
     /**
+     * checks if move from step $from to step $to is valid
+     *
      * @param $from
      * @param $to
      * @return bool

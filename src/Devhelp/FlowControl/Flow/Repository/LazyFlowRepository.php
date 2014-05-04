@@ -5,6 +5,10 @@ namespace Devhelp\FlowControl\Flow\Repository;
 
 use Devhelp\FlowControl\Flow\Builder\FlowBuilder;
 
+/**
+ * Repository uses FlowBuilder in order to build the full Flow object
+ * only on demand. Returns the same flow instance if it was already built
+ */
 class LazyFlowRepository implements FlowRepositoryInterface
 {
 
@@ -24,6 +28,9 @@ class LazyFlowRepository implements FlowRepositoryInterface
         $this->flows = array();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getFlow($flowId)
     {
         if (!isset($this->flows[$flowId])) {

@@ -5,6 +5,9 @@ namespace Devhelp\FlowControl\Flow\Repository;
 
 use Devhelp\FlowControl\Flow\Flow;
 
+/**
+ * Stores full Flow objects in array
+ */
 class SimpleFlowRepository implements FlowRepositoryInterface
 {
     protected $flows = array();
@@ -22,8 +25,7 @@ class SimpleFlowRepository implements FlowRepositoryInterface
     }
 
     /**
-     * @param $flowId
-     * @return Flow
+     * {@inheritdoc}
      */
     public function getFlow($flowId)
     {
