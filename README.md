@@ -60,11 +60,11 @@ $currentSteps = array(
 
 $flowControl->setFlowSteps($currentSteps);
 
-$flowControl->canAccess('step_d', 'flow_a'); //true
-$flowControl->canAccess('step_a', 'flow_a'); //false
-$flowControl->canAccess('step_c', 'flow_a'); //true
-$flowControl->canAccess('step_a', 'flow_b'); //true
-$flowControl->canAccess('step_b', 'flow_b'); //false
+$flowControl->isAllowed('step_d', 'flow_a'); //true
+$flowControl->isAllowed('step_a', 'flow_a'); //false
+$flowControl->isAllowed('step_c', 'flow_a'); //true
+$flowControl->isAllowed('step_a', 'flow_b'); //true
+$flowControl->isAllowed('step_b', 'flow_b'); //false
 
 $moves = array(
     'flow_a' => 'step_d',

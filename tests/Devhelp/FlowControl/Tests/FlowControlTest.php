@@ -11,17 +11,17 @@ class FlowControlTest extends BaseFlowControlTestCase
      * @test
      * @expectedException Devhelp\FlowControl\Exception\FlowDoesNotExistException
      */
-    public function canAccessThrowsExceptionIfFlowDoesNotExists()
+    public function isAllowedThrowsExceptionIfFlowDoesNotExists()
     {
         $flowControl = new FlowControl($this->getFlowRepositoryMock());
 
-        $flowControl->canAccess('test-step', 'test-flow');
+        $flowControl->isAllowed('test-step', 'test-flow');
     }
 
     /**
      * @test
      */
-    public function canAccessReturnsFalseIfStepDoesNotExistsInTheFlow()
+    public function isAllowedReturnsFalseIfStepDoesNotExistsInTheFlow()
     {
         $flowMock = $this->getFlowMock();
 
@@ -38,13 +38,13 @@ class FlowControlTest extends BaseFlowControlTestCase
 
         $flowControl = new FlowControl($this->getFlowRepositoryMock($flows));
 
-        $this->assertFalse($flowControl->canAccess('step', $testFlowId));
+        $this->assertFalse($flowControl->isAllowed('step', $testFlowId));
     }
 
     /**
      * @test
      */
-    public function canAccessReturnsTrueIfCurrentStepIsNotSetAndStepIsAnEntryPoint()
+    public function isAllowedReturnsTrueIfCurrentStepIsNotSetAndStepIsAnEntryPoint()
     {
         $flowMock = $this->getFlowMock();
 
@@ -66,13 +66,13 @@ class FlowControlTest extends BaseFlowControlTestCase
 
         $flowControl = new FlowControl($this->getFlowRepositoryMock($flows));
 
-        $this->assertTrue($flowControl->canAccess('step', $testFlowId));
+        $this->assertTrue($flowControl->isAllowed('step', $testFlowId));
     }
 
     /**
      * @test
      */
-    public function canAccessReturnsFalseIfCurrentStepIsNotSetAndStepIsNotAnEntryPoint()
+    public function isAllowedReturnsFalseIfCurrentStepIsNotSetAndStepIsNotAnEntryPoint()
     {
         $flowMock = $this->getFlowMock();
 
@@ -94,14 +94,14 @@ class FlowControlTest extends BaseFlowControlTestCase
 
         $flowControl = new FlowControl($this->getFlowRepositoryMock($flows));
 
-        $this->assertFalse($flowControl->canAccess('step', $testFlowId));
+        $this->assertFalse($flowControl->isAllowed('step', $testFlowId));
     }
 
     /**
      * @test
      * @dataProvider providerIsMoveValid
      */
-    public function canAccessReturnsWhatIsMoveValidReturnsWhenCalled($isMoveValid)
+    public function isAllowedReturnsWhatIsMoveValidReturnsWhenCalled($isMoveValid)
     {
         $flowMock = $this->getFlowMock();
 
@@ -127,7 +127,7 @@ class FlowControlTest extends BaseFlowControlTestCase
 
         $flowControl->setFlowSteps(array($testFlowId => $stepMock));
 
-        $this->assertEquals($isMoveValid, $flowControl->canAccess('step', $testFlowId));
+        $this->assertEquals($isMoveValid, $flowControl->isAllowed('step', $testFlowId));
     }
 
     public function providerIsMoveValid()
