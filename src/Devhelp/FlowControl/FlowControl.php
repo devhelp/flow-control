@@ -43,7 +43,7 @@ class FlowControl
      * @return bool
      * @throws Exception\FlowDoesNotExistException
      */
-    public function canAccess($step, $flowId)
+    public function isAllowed($step, $flowId)
     {
         $flow = $this->flowRepository->getFlow($flowId);
 
@@ -77,7 +77,7 @@ class FlowControl
         $validMoves = array();
 
         foreach ($moves as $flowId => $step) {
-            if ($this->canAccess($step, $flowId)) {
+            if ($this->isAllowed($step, $flowId)) {
 
                 /*
                  * only one valid step per flow - otherwise it we may have conflict because
