@@ -27,5 +27,8 @@
     },
     "autoload": {
         "psr-0": { "Devhelp\\FlowControl": "src/" }
+    },
+    "autoload-dev": {
+        "psr-0": { "Devhelp\\FlowControl\\Tests": "tests/" }
     }
 }
